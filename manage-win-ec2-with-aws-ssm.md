@@ -15,7 +15,7 @@ See [Delegating Access to SSM Run Command](http://docs.aws.amazon.com/AWSEC2/lat
 
 ## Add new Role and Policies for EC2 instances to be managed
 
-1. Add Managed Policies: "RunCommandInstance" (see [Delegating Access to SSM Run Command|http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/delegate-commands.html])
+1. Add Managed Policies: "RunCommandInstance" (see [Delegating Access to SSM Run Command](http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/delegate-commands.html)
 2. Add Role: RunCommandInstance
 3. Then attach policies, RunCommandInstance, AmazonEC2RoleforSSM, AmazonSSMFullAccess, AmazonSSMReadOnlyAccess
 
@@ -36,7 +36,7 @@ From console
 Or from awscli (se attached):
 
 1. create a json file containing the command
-2.  aws ssm create-document --profile gf --content file://ssm-ec2-config.json --name "ssm-ec2-cyberduck-config-v1" 
+2. aws ssm create-document --profile gf --content file://ssm-ec2-config.json --name "ssm-ec2-cyberduck-config-v1" 
 3. aws ssm create-association --profile gf --instance-id i-09cc28d8 --name "ssm-ec2-cyberduck-config-v1"
 
 ** Using SSM, only can install msi, not setup.exe
