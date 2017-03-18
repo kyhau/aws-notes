@@ -37,4 +37,6 @@ $ rm -rf /var/lib/rabbitmq
 #Reinstall RabbitMQ: 
 $ apt-get install rabbitmq-server
 
+#Check versions
+$ sudo rabbitmqctl status | grep RabbitMQ
 ```
