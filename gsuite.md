@@ -3,3 +3,5 @@
 ## Drive
 
 1. Drive stores at most 4,000 items or 5GB of data offline.
+
+1. You can restore a given user's deleted Google Drive files for a date range you specify, as long as the Drive files were deleted within the past 25 days.
