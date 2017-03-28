@@ -1,5 +1,18 @@
 # G Suite
 
+## Domain
+
+### Domain Alias Limitations
+
+Primary domain address (e.g. example.com)
+Domain alias (e.g. example.co.uk)
+
+1. Domain aliases can only be added to primary domains.
+
+1. Limit of 20 Domain Aliases per G Suite Account.
+
+1. Users must still sign in to their Google accounts using their primary domain address.
+
 ## Drive
 
 1. Drive stores at most 4,000 items or 5GB of data offline.
