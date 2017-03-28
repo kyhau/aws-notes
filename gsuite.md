@@ -13,6 +13,16 @@ Domain alias (e.g. example.co.uk)
 
 1. Users must still sign in to their Google accounts using their primary domain address.
 
+### Domain verification options 
+
+1. Add a ATXT record or CNAME record to your domain's DNS settings at your domain host's website. (RECOMMENDED)
+   (May take up to one hour after adding the record to reflect the change).
+
+
+1. Upload an HTML file to your domain's web server if you don't have access yo uout domain's DNS settings.
+
+1. Add a <meta> tag to your home page by editing a file on your domain's web server.
+
 ## Drive
 
 1. Drive stores at most 4,000 items or 5GB of data offline.
