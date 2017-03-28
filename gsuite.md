@@ -23,6 +23,11 @@ Domain alias (e.g. example.co.uk)
 
 1. Add a <meta> tag to your home page by editing a file on your domain's web server.
 
+### Mail Exchange (MX) records
+
+Control how incoming email is routed for your domain.
+Before Google can host email you'll need to change these MX records to point to Google's Mail servers.
+
 ## Drive
 
 1. Drive stores at most 4,000 items or 5GB of data offline.
