@@ -104,3 +104,9 @@ In the Password section, click Reset sign-in cookies.
 1. Click Reset sign-in cookies.
 
 It can take up to 60 minutes to sign out the user from current Gmail HTTP sessions. The logout time for other applications can vary.
+
+## Security
+
+### Admin Account Recovery
+
+Accounts with 3 super administrators or 500+ users, the email and phone methods **are not** available.
