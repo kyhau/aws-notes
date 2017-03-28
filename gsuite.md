@@ -107,6 +107,9 @@ It can take up to 60 minutes to sign out the user from current Gmail HTTP sessio
 
 ## Security
 
+To require users to sign in to G Suite using their LDAP credentials, Single Sign On should be enabled in your domain.
+
 ### Admin Account Recovery
 
 1. Accounts with 3 super administrators or 500+ users, the email and phone methods **are not** available.
+
