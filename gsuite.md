@@ -2,10 +2,21 @@
 
 ## Domain
 
+### Multiple domains in one account
+
+Primary domain  (e.g. example.com)
+Separate domain (e.g. othercompany.com)
+
+jan.code@example.com
+feb.line@othercompany.com
+
 ### Domain Alias Limitations
 
-Primary domain address (e.g. example.com)
+Primary domain (e.g. example.com)
 Domain alias (e.g. example.co.uk)
+
+jan.code@example.com
+jan.code@example.co.uk
 
 1. Domain aliases can only be added to primary domains.
 
