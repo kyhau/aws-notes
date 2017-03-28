@@ -1,6 +1,14 @@
 # G Suite
 
-## Domain
+##### Table of Contents
+
+- [Domain](#domain)
+- [Drive](#drive)
+- [Gmail](#gmail)
+- [Group](#group)
+- [Mobile Device Management](#mobile-device-management)
+- [Security](#security)
+
 
 ### Multiple domains in one account
 
@@ -118,6 +126,19 @@ Note: The values for the [DNS TXT record](https://support.google.com/a/answer/27
 If you don't want to configure DKIM, close the Authenticate email window.
 
 Note: It can take up to 48 hours for DNS changes to fully propagate.
+
+## Group
+
+The 4 kinds of Google Groups
+
+1. Email list
+
+1. Web Forum (discussion board)
+
+1. Q&A Forum
+
+1. Collaborative inbox
+
 
 ## Mobile Device Management
 
