@@ -2,60 +2,61 @@
 
 ##### Table of Contents
 
-- [Domain](#domain)
-- [Drive](#drive)
-- [Gmail](#gmail)
-- [Group](#group)
-- [Mobile Device Management](#mobile-device-management)
+- [User creation, deletion, and administration](#user-creation-deletion-and-administration)
+- [Organizational units](#organizational-units)
+- [G Suite services and organizational access](#g-suite-services-and-organizational-access)
+- [Mail delivery, routing, and filtering](#mail-delivery-routing-and-filtering)
+- [Calendar settings and resources](#calendar-settings-and-resources)
+- [Mobile policies and device management](#mobile-policies-and-device-management)
 - [Security](#security)
+- [Groups](#groups)
+- [Domains](#domains)
+
+---
+
+## User creation, deletion, and administration
+
+1. Create new users manually, in bulk, and via invitation
+1. Demonstrate how to rename users, move users, add/remove nicknames, and suspend users
+1. Demonstrate how to delete users, retain data files for deleted users, and restore recently deleted users
+1. Use System Roles to delegate administration duties to users in a domain, including custom administration roles
+1. Demonstrate how to reset a user password, force the user to change their password, and monitor the strength of user passwords
+
+- Manual vs. Bulk creation
+- Password Length Settings
+- Renaming
+- Forcing logouts / password changes
+- Join / Leave Organization.
+- Custom roles
+
+---
+
+## Organizational units
+
+1. Demonstrate how to create and use organizational units to manage users, groups, and security settings
+
+1. Demonstrate how to manage G Suite services by organizational unit
+
+---
+
+## G Suite services and organizational access
+
+1. Demonstrate how to configure sharing settings, storage requirements for Drive
+
+1. Demonstrate how to use Chrome policies for devices and users
+
+1. Demonstrate how to manage domain and organization level settings for G Suite services
+
+1. Demonstrate how to use reports to determine services use, troubleshoot system issues, and to improve domain security
+
+- Turning off / on 
+- Google Drive Settings 
+- Google Calendar Settings
+- Service based sub orgs
+- Core services vs additional services vs marketplace. 
 
 
-### Multiple domains in one account
-
-- Primary domain  (e.g. example.com)
-- Separate domain (e.g. othercompany.com)
-
-- jan.code@example.com
-- feb.line@othercompany.com
-
-1. You will only ever have one primary domain.
-
-1. You can add up to 500 domains to your organisation's Google account including 20 domain aliases.
-
-1. Adding a domain alias or customising web addresses can only be done with a primary domain.
-
-1. You cannot set different policies, configuration settings or restrict sharing based on a domain.
-
-### Domain Alias Limitations
-
-- Primary domain (e.g. example.com)
-- Domain alias (e.g. example.co.uk)
-
-- jan.code@example.com
-- jan.code@example.co.uk
-
-1. Domain aliases can only be added to primary domain.
-
-1. Limit of 20 Domain Aliases per G Suite Account.
-
-1. Users must still sign in to their Google accounts using their primary domain address.
-
-### Domain verification options 
-
-1. Add a ATXT record or CNAME record to your domain's DNS settings at your domain host's website. (RECOMMENDED)
-   (May take up to one hour after adding the record to reflect the change).
-
-
-1. Upload an HTML file to your domain's web server if you don't have access yo uout domain's DNS settings.
-
-1. Add a <meta> tag to your home page by editing a file on your domain's web server.
-
-### Mail Exchange (MX) records
-
-Control how incoming email is routed for your domain.
-Before Google can host email you'll need to change these MX records to point to Google's Mail servers.
-
-## Drive
+#### Drive
 
 1. Drive stores at most 4,000 items or 5GB of data offline.
 
@@ -65,7 +66,31 @@ Before Google can host email you'll need to change these MX records to point to 
 
 1. By default, each user with a G Suite account has 30 GB of storage available for uploaded Google Drive files, Gmail, and Google+ photos. Users with the free edition of G Suite (or consumer accounts) get 15 GB of storage.
 
-## Gmail
+
+---
+
+## Mail delivery, routing, and filtering
+
+1. Demonstrate how to configure G Suite to manage mail routing
+
+1. Demonstrate how to manage approved or reject sender lists and whitelist senders by domain and IP addresses
+
+1. Demonstrate how to apply security best practices to email including transmit mail via a secure connection based on system rules
+
+1. Demonstrate how to filter messages based on general compliance settings, content, and attachment settings
+
+
+- Spam settings
+- Understand Mailflow
+- Gmail Settings (User / Group)
+
+
+**Mail Exchange (MX) records**
+
+- Control how incoming email is routed for your domain.
+- Before Google can host email you'll need to change these MX records to point to Google's Mail servers.
+
+Gmail
 
 ### Prevent Spammers from Forging Your Domain
 
@@ -126,21 +151,23 @@ Note: The values for the [DNS TXT record](https://support.google.com/a/answer/27
 If you don't want to configure DKIM, close the Authenticate email window.
 
 Note: It can take up to 48 hours for DNS changes to fully propagate.
+---
 
-## Group
+## Calendar settings and resources
 
-The 4 kinds of Google Groups
+1. Create and share a group calendar, set-up calendar sharing options, and delegate calendar access
 
-1. Email list
-
-1. Web Forum (discussion board)
-
-1. Q&A Forum
-
-1. Collaborative inbox
+1. Demonstrate how to create and manage calendar resources
 
 
-## Mobile Device Management
+---
+
+## Mobile policies and device management
+
+1. Demonstrate how to use G Suite Mobile Management to manage Android and Google Sync devices
+
+1. Demonstrate how to reset user access and prevent access from a lost mobile device
+
 
 ### To enforce Android device management
 
@@ -167,13 +194,27 @@ The 4 kinds of Google Groups
 
 1. From the user list, click the username.
 Once the page has loaded, click Account, which displays the user's profile.
-In the Password section, click Reset sign-in cookies.
+In the Password Section, click Reset sign-in cookies.
 
 1. Click Reset sign-in cookies.
 
 It can take up to 60 minutes to sign out the user from current Gmail HTTP sessions. The logout time for other applications can vary.
 
+
+---
+
 ## Security
+
+1. Demonstrate how to use exception groups to manage security options by organizational unit
+
+1. Demonstrate how to configure SSO, OAuth, and 2-step verification
+
+- Two Step Verification (Configure / Enforce)
+- Password Length 
+- SLL settings
+
+
+Security
 
 1. To require users to sign in to G Suite using their LDAP credentials, Single Sign On should be enabled in your domain.
 
@@ -183,4 +224,69 @@ It can take up to 60 minutes to sign out the user from current Gmail HTTP sessio
 ### Admin Account Recovery
 
 1. Accounts with 3 super administrators or 500+ users, the email and phone methods **are not** available.
+
+
+---
+
+## Groups
+
+1. Create a group that will be used as
+
+    1. [Collaborative Inbox (Google Groups for Business)](https://support.google.com/a/answer/167430?hl=en) (shared mailbox for a group of users)
+    1. Q & A Forums, and
+    1. distribution lists
+
+1. Demonstrate how to add, edit, disable, and delete a group, and prevent users from seeing other members of the group, and administer group roles
+
+1. Demonstrate how to share docs, sites, and videos using groups
+
+1. Demonstrate how to use Groups for Business to manage permissions and group settings
+
+- Four types of groups and setting for each: Email list, Web Forum (discussion board), Q&A Forum, Collaborative inbox
+- Group Access
+- How groups are different from sub orgs
+
+---
+
+## Domains
+
+### Multiple domains in one account
+
+- Primary domain  (e.g. example.com)
+- Separate domain (e.g. othercompany.com)
+
+- jan.code@example.com
+- feb.line@othercompany.com
+
+1. You will only ever have one primary domain.
+
+1. You can add up to 500 domains to your organisation's Google account including 20 domain aliases.
+
+1. Adding a domain alias or customising web addresses can only be done with a primary domain.
+
+1. You cannot set different policies, configuration settings or restrict sharing based on a domain.
+
+### Domain Alias Limitations
+
+- Primary domain (e.g. example.com)
+- Domain alias (e.g. example.co.uk)
+
+- jan.code@example.com
+- jan.code@example.co.uk
+
+1. Domain aliases can only be added to primary domain.
+
+1. Limit of 20 Domain Aliases per G Suite Account.
+
+1. Users must still sign in to their Google accounts using their primary domain address.
+
+### Domain verification options 
+
+1. Add a ATXT record or CNAME record to your domain's DNS settings at your domain host's website. (RECOMMENDED)
+   (May take up to one hour after adding the record to reflect the change).
+
+
+1. Upload an HTML file to your domain's web server if you don't have access yo uout domain's DNS settings.
+
+1. Add a <meta> tag to your home page by editing a file on your domain's web server.
 
