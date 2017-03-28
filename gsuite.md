@@ -24,7 +24,7 @@ You must create DNS TXT records to configure these email security features and a
 
 Note: If you purchased your domain from Google, the SPF record is already created. Also your DNS registrar credentials are available in your G Suite Admin console.
 
-#### To create or view an SPF record for your company's domain:
+### To create or view an SPF record for your company's domain:
 
 You must have access to your DNS registrar to create or view the DNS TXT record for SPF.
 
@@ -45,7 +45,7 @@ Note: It may take up to 48 hours for DNS changes to fully propagate.
 
 If you have multiple domains in your company, you must complete these steps for every domain.
 
-#### To configure DKIM for your company's domain
+### To configure DKIM for your company's domain
 
 1. Sign in to your domain's G Suite Admin console as the G Suite super administrator.
 
