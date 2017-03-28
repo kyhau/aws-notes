@@ -10,6 +10,14 @@ Separate domain (e.g. othercompany.com)
 jan.code@example.com
 feb.line@othercompany.com
 
+1. You will only ever have one primary domain.
+
+1. You can add up to 500 domains to your organisation's Google account including 20 domain aliases.
+
+1. Adding a domain alias or customising web addresses can only be done with a primary domain.
+
+1. You cannot set different policies, configuration settings or restrict sharing based on a domain.
+
 ### Domain Alias Limitations
 
 Primary domain (e.g. example.com)
@@ -18,7 +26,7 @@ Domain alias (e.g. example.co.uk)
 jan.code@example.com
 jan.code@example.co.uk
 
-1. Domain aliases can only be added to primary domains.
+1. Domain aliases can only be added to primary domain.
 
 1. Limit of 20 Domain Aliases per G Suite Account.
 
