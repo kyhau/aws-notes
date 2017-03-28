@@ -109,4 +109,4 @@ It can take up to 60 minutes to sign out the user from current Gmail HTTP sessio
 
 ### Admin Account Recovery
 
-Accounts with 3 super administrators or 500+ users, the email and phone methods **are not** available.
+1. Accounts with 3 super administrators or 500+ users, the email and phone methods **are not** available.
