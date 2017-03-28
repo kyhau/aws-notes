@@ -74,6 +74,23 @@ Note: It can take up to 48 hours for DNS changes to fully propagate.
 
 ## Mobile Device Management
 
+### To enforce Android device management
+
+1. In the Admin console, “Manage Android Devices” security policy enforcement must be enabled.
+
+1. On the device, the latest version of the G Suite Device Policy application must be installed.
+
+### To remotely wipe the device
+
+1. In the Admin console, Allow user to remote wipe device is enabled.
+
+1. On the device, G Suite Device Policy is installed.
+
+1. Use **Remote Wipe** to delete everything (including SD card and all personal data).
+   Use **Wipe Account** to delete only G Suite data.
+   See [Remove corporate data from a mobile device](https://support.google.com/a/answer/173390?hl=en)
+
+
 ### To reset the sign-in cookies for a user:
 
 1. Sign in to your domain's G Suite Admin console as the administrator user using the firstname.lastname@yourdomain.com format.
