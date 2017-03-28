@@ -72,4 +72,18 @@ If you don't want to configure DKIM, close the Authenticate email window.
 
 Note: It can take up to 48 hours for DNS changes to fully propagate.
 
+## Mobile Device Management
 
+### To reset the sign-in cookies for a user:
+
+1. Sign in to your domain's G Suite Admin console as the administrator user using the firstname.lastname@yourdomain.com format.
+
+1. Click the Users icon.
+
+1. From the user list, click the username.
+Once the page has loaded, click Account, which displays the user's profile.
+In the Password section, click Reset sign-in cookies.
+
+1. Click Reset sign-in cookies.
+
+It can take up to 60 minutes to sign out the user from current Gmail HTTP sessions. The logout time for other applications can vary.
