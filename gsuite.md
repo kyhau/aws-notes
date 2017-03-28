@@ -110,6 +110,7 @@ It can take up to 60 minutes to sign out the user from current Gmail HTTP sessio
 1. To require users to sign in to G Suite using their LDAP credentials, Single Sign On should be enabled in your domain.
 
 1. Google's 2-Step Verification cannot be ussed for accounts using a SAML single sign-on service.
+   But you can get a 3rd party SSO solution that has 2-Step Verification included.
 
 ### Admin Account Recovery
 
