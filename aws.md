@@ -15,3 +15,5 @@ Some AWS notes
 # Notes
 
 1. [Manage Win EC2 with AWS SSM](manage-win-ec2-with-aws-ssm.md)
+
+1. [Resize EC2 Volume](https://stackoverflow.com/questions/11014584/ec2-cant-resize-volume-after-increasing-size)
