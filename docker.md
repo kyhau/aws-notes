@@ -76,7 +76,7 @@ $ docker rmi <IMAGE_ID>
 # Get the image to the server:
 $ docker save mycompany/imageName:v1.0.0b2 | bzip2 | pv | ssh your_name@your_server 'bunzip > imageName.img'
 
-# Start the image
+# Start the image (e.g. mount some volumns with mac address)
 $ docker run --mac-address=02:20:12:30:e4:cg -v /opt/gurobi:/opt/gurobi:ro docker.mycompany.com/build_envs/imageName:3.5 solve -h 
 or
 $ docker run --mac-address=`ifconfig eth0 | grep HWaddr | sed 's/.*HWaddr \(..:..:..:..:..:..\).*/\1/'` -v /opt/gurobi:/opt/gurobi:ro docker.mycompany.com/build_envs/imageName:3.5 solve -h
