@@ -8,13 +8,13 @@ Update C:\Users\username\pip\pip.ini on Windows 8/10, or ~/.config/pip/pip.conf 
 
 ````sh
 [global]
-index_url=https://login.pw@devpi.example.com/<firstname_lastname>/dev/
+index_url=https://login.pw@devpi.mycompany.com/kyhau/dev/
 ````
 OR
 Set env variable PIP_INDEX:
 
 ````sh
-set PIP_INDEX_URL=https://login.pw@devpi.example.com/<firstname_lastname>/dev/
+set PIP_INDEX_URL=https://login.pw@devpi.mycompany.com/kyhau/dev/
 ````
 
 Configuration file locations can be found [here](http://pip.readthedocs.org/en/stable/user_guide/)
@@ -34,10 +34,10 @@ Configuration file locations can be found [here](http://pip.readthedocs.org/en/s
 
 ````sh
 # Login
-$ devpi login <firstname_lastname> --password <pw>
+$ devpi login kyhau --password <pw>
 
 # Change to your devpi index
-$ devpi use https://login:pw@devpi.example.com/<firstname_lastname>/dev/
+$ devpi use https://login:pw@devpi.mycompany.com/kyhau/dev/
 
 # Upload your wheel
 $ devpi upload <wheel_name>.whl
@@ -47,10 +47,10 @@ $ devpi upload <wheel_name>.whl
 
 ````sh
 # Login
-$ devpi login <firstname_lastname> --password <pw>
+$ devpi login kyhau --password <pw>
 
 # Change to your devpi index
-$ devpi use https://login.pw@devpi.example.com/<firstname_lastname>/dev/
+$ devpi use https://login.pw@devpi.mycompany.com/kyhau/dev/
 
 # Remove
 $ devpi remove <wheel_name_with_or_without_version>
@@ -63,7 +63,7 @@ $ devpi remove <wheel_name_with_or_without_version>
 ````sh
 
 # step 1: ask an admin to help. They will need ssh access to the devpi server
-$ ssh admin_name@devpi.example.com
+$ ssh admin_name@devpi.mycompany.com
 
 # sudo to the devpi account. This will automatically activate the appropriate python environment as well
 $ sudo su devpi
@@ -91,5 +91,34 @@ $ devpi index <index> acl_upload=<user list>
 #### How to add all users to a permission list
 
 ````sh
-$ devpi user -l | tr "\\n" "," | xargs -i devpi index biarri/dev 'acl_upload={}'
+$ devpi user -l | tr "\\n" "," | xargs -i devpi index mycompany/dev 'acl_upload={}'
 ````
+
+#### How to update user password, email address, title and/or description
+
+```
+# First login at the user or root:
+$ devpi login kyhau --password 1234
+logged in 'kyhau', credentials valid for 10.00 hours
+
+# Then modify the desired property:
+$ devpi user -m emilie email=kyhaunew@gmail.com
+/kyhau changing email: kyhaunew@gmail.com
+user modified: kyhau
+```
+
+# How to create user personal index (e.g. kyhau/dev) which should inherit mycompany/dev:
+
+```
+devpi login kyhau --password kyhau
+devpi index -c dev bases=/mycompany/dev volatile=True
+
+> devpi index https://devpi.mycompany.com/kyhau/dev
+https://devpi.mycompany.com/kyhau/dev:
+  type=stage
+  bases=mycompany/dev
+  volatile=True
+  uploadtrigger_jenkins=None
+  acl_upload=kyhau
+  pypi_whitelist=
+```
