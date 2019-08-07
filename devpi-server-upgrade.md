@@ -1,6 +1,6 @@
-## devpi-server Upgrade
+# devpi-server Upgrade
 
-```sh
+```
 # Login to the devpi registry server
 
 $ sudo su devpi
