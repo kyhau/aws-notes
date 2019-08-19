@@ -17,9 +17,9 @@ aws ecr get-login --no-include-email | bash
 ################################################################################
 # Elastic Beanstalk, quick local packaging
 
-docker build -t local/web_service .
-docker run -d -p 8080:8080 local/web_service:latest
-zip -r app.zip web_service env setup.py *.ini Dockerfile Dockerrun.aws.json constraints.txt MANIFEST.in
+docker build -t local/my_app .
+docker run -d -p 8080:8080 local/my_app:latest
+zip -r app.zip my_app env setup.py *.ini Dockerfile Dockerrun.aws.json constraints.txt MANIFEST.in
 
 aws elasticbeanstalk list-available-solution-stacks
 
@@ -30,6 +30,11 @@ aws iam update-user --user-name devpos --new-user-name devops --profile my_profi
 ################################################################################
 # Find IP in security group
 aws ec2 describe-security-groups --profile networks --filters Name=ip-permission.from-port,Values=22 Name=ip-permission.cidr,Values='203.87.3.106/32' Name=ip-permission.cidr,Values='61.61.61.61/32' --query SecurityGroups[*].{groupId:GroupId}
+
+################################################################################
+# Get latest ECS Optimized AMI
+latest_ami=`aws ssm get-parameters --names /aws/service/ecs/optimized-ami/amazon-linux-2/recommended/image_id --region ap-southeast-2 --query "Parameters[0].Value" | awk -F \" '{print $2}'`
+echo $latest_ami
 
 ################################################################################
 # Using aws ssm (simple systems manager)
