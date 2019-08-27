@@ -17,6 +17,7 @@ https://aws.amazon.com/blogs/apn/the-5-pillars-of-the-aws-well-architected-frame
 1. [How to build a multi-region active-active architecture on AWS](
 https://read.acloud.guru/why-and-how-do-we-build-a-multi-region-active-active-architecture-6d81acb7d208
 ) - Adrian Hornsby, 2018-02-25
+    - Read also [CAP theorem](https://en.wikipedia.org/wiki/CAP_theorem).
 
 1. [Building Multi-Region Active-Active Architecture in AWS using containerised microservices](
 https://medium.com/@sajidniazi/building-multi-region-active-active-architecture-in-aws-using-containerised-microservices-7b1d40a7063f
