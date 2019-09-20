@@ -1,5 +1,4 @@
 #!/bin/bash
-#
 # @author       kyhau
 # @description  Simple API for grepping given file type.
 # @usage        Create following symbolic links to this file:

@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 # This script is for creating ftp site.
 
 NEW_FILESTORE_NAME=samplefiles
