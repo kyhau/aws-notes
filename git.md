@@ -14,6 +14,11 @@ git reset --hard
 git clean -fxd
 
 ################################################################################
+# Remove all remote commits after the given commit
+git reset --hard <last_working_commit_id>
+git push --force
+
+################################################################################
 # See which tag are you in
 git describe --tags
 
