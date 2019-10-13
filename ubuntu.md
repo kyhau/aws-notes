@@ -7,14 +7,26 @@ cat dirs | xargs mkdir
 
 ################################################################################
 # umount
-umount -l -f /var/docker-kingkong
+umount -l -f /var/docker-store
 
 ################################################################################
+watch -n no_of_seconds cmd
+
+################################################################################
+# List all users
+cut -d: -f1 /etc/passwd
+
+################################################################################
+# Check memory usage in real-time
+watch -n 1 free -m
+
+# Check system memory usage in real-time
+watch -n 1 cat /proc/meminfo
+
 # Free memory
 #   You can free up unused memory under Ubuntu/Linux Mint using this command:
-#   NOTE: this action won't make your system faster nor it will affect its
-#   stability and performance, it will just clean up memory used by the Linux
-#   Kernel on caches.
+#   NOTE: this action won't make your system faster nor it will affect its stability and performance, it will just
+#   clean up memory used by the Linux Kernel on caches.
 
 sudo sysctl -w vm.drop_caches=3
 
@@ -23,20 +35,10 @@ sudo sysctl -w vm.drop_caches=3
 
 sudo sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
 
-################################################################################
-# List all users
-cut -d: -f1 /etc/passwd
+# See http://www.upubuntu.com/2013/01/how-to-free-up-unused-memory-in.html
 
 ################################################################################
-# apt
-
-apt list --installed | grep gdal
-
-# Show lib
-strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX
-
-################################################################################
-# Check local cert expiry date (e.g. on dantzig)
+# Check local cert expiry date
 
 openssl x509 -enddate -noout -in /home/path/my_cert.pem
 
@@ -46,7 +48,13 @@ openssl x509 -enddate -noout -in /home/path/my_cert.pem
 ifconfig | grep HWaddr
 
 ################################################################################
-watch -n no_of_seconds cmd
+# apt
+
+apt list --installed | grep gdal
+
+# Show lib
+strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX
+
 
 ################################################################################
 # https://community.home-assistant.io/t/ha-0-58-1-cant-start-loaded-not-found-reason-no-such-file-or-directory/33669/3
