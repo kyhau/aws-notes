@@ -1,5 +1,32 @@
 # git
 
+### How line ending conversions work with git core.autocrlf between different operating systems
+(See `pratt` in 
+https://stackoverflow.com/questions/3206843/how-line-ending-conversions-work-with-git-core-autocrlf-between-different-operat)
+
+`core.autocrlf` value does not depend on OS type but on Windows default value is `true` and on Linux default value is
+`input`. I explored 3 possible values for commit and checkout cases and this is the resulting table:
+
+```
+╔═══════════════╦══════════════╦══════════════╦══════════════╗
+║ core.autocrlf ║     false    ║     input    ║     true     ║
+╠═══════════════╬══════════════╬══════════════╬══════════════╣
+║               ║ LF   => LF   ║ LF   => LF   ║ LF   => LF   ║
+║ git commit    ║ CR   => CR   ║ CR   => CR   ║ CR   => CR   ║
+║               ║ CRLF => CRLF ║ CRLF => LF   ║ CRLF => LF   ║
+╠═══════════════╬══════════════╬══════════════╬══════════════╣
+║               ║ LF   => LF   ║ LF   => LF   ║ LF   => CRLF ║
+║ git checkout  ║ CR   => CR   ║ CR   => CR   ║ CR   => CR   ║
+║               ║ CRLF => CRLF ║ CRLF => CRLF ║ CRLF => CRLF ║
+╚═══════════════╩══════════════╩══════════════╩══════════════╝
+```
+Shorty summary in words: Files with `CR` alone are never touched. 
+`false` never touches line endings. 
+`true` always commits as `LF` and checks out as `CRLF`. 
+And `input` always commits as `LF` and checks out as-is.
+
+
+### Cheat sheet
 ```
 ################################################################################
 # Git reset
